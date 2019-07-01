@@ -2,14 +2,14 @@
 //  author : Mulyadih
 //  tugas  : UAs
 session_start();
-$nis = $_POST['nis'];
+$id = $_POST['id'];
 $pass =$_POST['password'];
 
 include 'koneksi.php';
 
-$murid = "select * from murid a inner join kelas b on a.nis=b.nis  where a.nis='$nis' ";
-$guru = "select * from guru where nip='$nis'";
-$staff = "select * from staff where nip='$nis'";
+$murid = "select * from murid a inner join kelas b on a.nis=b.nis  where a.nis='$id' ";
+$guru = "select * from guru where nip='$id'";
+$staff = "select * from staff where nip='$id'";
 if(mysqli_num_rows(mysqli_query($koneksi,$murid)) > 0){
     $hasil = mysqli_fetch_array(mysqli_query($koneksi,$murid));
     if(password_verify($pass,$hasil['password'])){
