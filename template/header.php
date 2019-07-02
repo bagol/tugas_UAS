@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Title Page-->
-    <title>Login</title>
+    <title>Dashboard <?= strtoupper($_SESSION['role']); ?></title>
 
     <!-- Fontfaces CSS-->
     <link href="../assets/css/font-face.css" rel="stylesheet" media="all">
