@@ -161,6 +161,9 @@ session_start();
                         <li>
                             <a href=""><i class="fas fa-chart-bar"></i>Buat Mapel</a>
                         </li>
+                        <li>
+                            <a href=""><i class="fas fa-chart-bar"></i>Kelas</a>
+                        </li>
                     </ul>
                 </div>
             </nav>
@@ -192,6 +195,9 @@ session_start();
                         </li>
                         <li>
                             <a href=""><i class="fas fa-chart-bar"></i>Buat Mapel</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fas fa-chart-bar"></i>Kelas</a>
                         </li>
                     </ul>
                 </nav>
