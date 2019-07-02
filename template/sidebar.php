@@ -153,7 +153,7 @@ session_start();
                             <a href="tambah_murid.php"><i class="fas fa-chart-bar"></i>Tambah Murid</a>
                         </li>
                         <li>
-                            <a href=""><i class="fas fa-chart-bar"></i>Tamabh Guru</a>
+                            <a href="tambah_guru.php"><i class="fas fa-chart-bar"></i>Tamabh Guru</a>
                         </li>
                         <li>
                             <a href=""><i class="fas fa-chart-bar"></i>Buat Jadwal</a>
@@ -188,7 +188,7 @@ session_start();
                             <a href="tambah_murid.php"><i class="fas fa-chart-bar"></i>Tambah Murid</a>
                         </li>
                         <li>
-                            <a href=""><i class="fas fa-chart-bar"></i>Tamabh Guru</a>
+                            <a href="tambah_guru.php"><i class="fas fa-chart-bar"></i>Tamabh Guru</a>
                         </li>
                         <li>
                             <a href=""><i class="fas fa-chart-bar"></i>Buat Jadwal</a>
