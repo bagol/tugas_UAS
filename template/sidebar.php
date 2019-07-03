@@ -159,10 +159,10 @@ session_start();
                             <a href=""><i class="fas fa-chart-bar"></i>Buat Jadwal</a>
                         </li>
                         <li>
-                            <a href=""><i class="fas fa-chart-bar"></i>Buat Mapel</a>
+                            <a href="tambah_mapel.php"><i class="fas fa-chart-bar"></i>Buat Mapel</a>
                         </li>
                         <li>
-                            <a href=""><i class="fas fa-chart-bar"></i>Kelas</a>
+                            <a href="tambah_kelas.php"><i class="fas fa-chart-bar"></i>Kelas</a>
                         </li>
                     </ul>
                 </div>
@@ -194,10 +194,10 @@ session_start();
                             <a href=""><i class="fas fa-chart-bar"></i>Buat Jadwal</a>
                         </li>
                         <li>
-                            <a href=""><i class="fas fa-chart-bar"></i>Buat Mapel</a>
+                            <a href="tambah_mapel.php"><i class="fas fa-chart-bar"></i>Buat Mapel</a>
                         </li>
                         <li>
-                            <a href=""><i class="fas fa-chart-bar"></i>Kelas</a>
+                            <a href="tambah_kelas.php"><i class="fas fa-chart-bar"></i>Kelas</a>
                         </li>
                     </ul>
                 </nav>

@@ -8,9 +8,10 @@ if($_POST['user']=='murid'){
     $email = $_POST['email'];
     $alamat = $_POST['alamat'];
     $notlpn = $_POST['notlpn'];
-    $sql = "update murid set nama='$nama', password='$password', email='$email', alamat='$alamat', notlpn='$notlpn' where nis='$nis'";
+    $id_kelas = $_POST['id_kelas'];
+    $sql = "update murid set nama='$nama', password='$password', email='$email', alamat='$alamat', notlpn='$notlpn', id_kelas='$id_kelas' where nis='$nis'";
     if(mysqli_query($koneksi,$sql)){
-        header("location:tambah_murid.php?pesan=murid_added");
+        header("location:tambah_murid.php?pesan=murid_update");
     }else{
         header("location:tambah_murid.php?pesan=faild_added");
     }

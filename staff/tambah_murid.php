@@ -33,6 +33,7 @@
                         <th>Alamat</th>
                         <th>Email</th>
                         <th>No Tlpn</th>
+                        <th>Kelas</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -40,8 +41,16 @@
                     <?php
                     include('../koneksi.php');
 
+                    $kelass = array();
+                    $sql1 = "select * from kelas";
+                    $query1 = mysqli_query($koneksi,$sql1);
+                    $noo = 0 ;
+                    while($kel = mysqli_fetch_array($query1)){
+                        $kelass[$noo++] = array('id' => $kel['id'], 'no' => $kel['no_kelas']);
+                    }
+
                     $no=1;
-                    $sql="select * from murid ";
+                    $sql="select * from murid a join kelas b on a.id_kelas=b.id";
                     $query = mysqli_query($koneksi,$sql);
                     while($hasil = mysqli_fetch_array($query)){
                     ?>
@@ -54,6 +63,7 @@
                             <span class="block-email"><?= $hasil['email'];?></span>
                         </td>
                         <td><?= $hasil['notlpn'];?></td>
+                        <td><?= $hasil['no_kelas'];?></td>
                         <td>
                             <div class="table-data-feature">
                                 <button class="item" data-toggle="modal" data-target="#edit<?= $hasil['nis'];?>" data-placement="top" title="Ubah">
@@ -114,6 +124,18 @@
                 <div class="form-group">
                     <label for="nf-email" class=" form-control-label">No Telphon</label>
                     <input type="text" maxlength="13"  name="notlpn" placeholder="Tuliskan Nomer Telephon" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label class=" form-control-label">Kelas</label>
+                    <select name="id_kelas" id="select" class="form-control">
+                        <?php 
+                            $sql="select * from kelas";
+                            $query = mysqli_query($koneksi,$sql);
+                            while($kelas = mysqli_fetch_array($query)){
+                        ?>
+                        <option value="<?= $kelas['id'] ?>"><?= $kelas['no_kelas'] ?></option>
+                        <?php } ?>
+                    </select>
                 </div>
         </div>
         <div class="modal-footer">
@@ -200,6 +222,17 @@
             <div class="form-group">
                 <label for="nf-email" class=" form-control-label">No Telphon</label>
                 <input type="text" maxlength="13"  name="notlpn" value="<?=$edit['notlpn'] ?>" class="form-control">
+            </div>
+            <div class="form-group">
+                <label class=" form-control-label">Kelas</label>
+                <select name="id_kelas" id="select" class="form-control">
+                    <?php 
+                       $length = count($kelass);
+                       for($i=0;$i<$length;$i++){
+                    ?>
+                    <option value="<?= $kelass[$i]['id'] ?>"><?= $kelass[$i]['no'] ?></option>
+                    <?php } ?>
+                </select>
             </div>
         </div>
         <div class="modal-footer">

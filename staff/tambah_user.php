@@ -7,7 +7,8 @@ if($_POST['user']=='murid'){
     $email = $_POST['email'];
     $alamat = $_POST['alamat'];
     $notlpn = $_POST['notlpn'];
-    $sql = "INSERT INTO murid values('$nis','$nama','$password','$alamat','$email','$notlpn');";
+    $kelas = $_POST['id_kelas'];
+    $sql = "INSERT INTO murid values('$nis','$nama','$password','$alamat','$email','$notlpn','$id_kelas');";
     if(mysqli_query($koneksi,$sql)){
         header("location:tambah_murid.php?pesan=murid_added");
     }else{
