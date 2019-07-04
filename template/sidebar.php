@@ -25,10 +25,10 @@ session_start();
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                         </li>
                         <li>
-                            <a href="murid_nilai.php"><i class="fas fa-chart-bar"></i>Nilai</a>
+                            <a href="murid_nilai.php"><i class="fas fa-print"></i>Nilai</a>
                         </li>
                         <li>
-                            <a href="cek_jadwal.php"><i class="fas fa-chart-bar"></i>Jadwal</a>
+                            <a href="cek_jadwal.php"><i class="fas fa-calendar"></i>Jadwal</a>
                         </li>
                     </ul>
                 </div>
@@ -51,10 +51,10 @@ session_start();
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                         </li>
                         <li>
-                            <a href="murid_nilai.php"><i class="fas fa-chart-bar"></i>Nilai</a>
+                            <a href="murid_nilai.php"><i class="fas fa-print"></i>Nilai</a>
                         </li>
                         <li>
-                            <a href="cek_jadwal.php"><i class="fas fa-chart-bar"></i>Jadwal</a>
+                            <a href="cek_jadwal.php"><i class="fas fa-calendar"></i>Jadwal</a>
                         </li>
                     </ul>
                 </nav>
@@ -86,10 +86,10 @@ session_start();
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                         </li>
                         <li>
-                            <a href="cek_jadwal.php"><i class="fas fa-chart-bar"></i>Jadwal Mengajar</a>
+                            <a href="cek_jadwal.php"><i class="fas fa-calendar"></i>Jadwal Mengajar</a>
                         </li>
                         <li>
-                            <a href="input_nilai.php"><i class="fas fa-chart-bar"></i>Input Nilai</a>
+                            <a href="input_nilai.php"><i class="fas fa-pencil-square-o"></i>Input Nilai</a>
                         </li>
                     </ul>
                 </div>
@@ -112,10 +112,10 @@ session_start();
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                         </li>
                         <li>
-                            <a href="cek_jadwal.php"><i class="fas fa-chart-bar"></i>Jadwal Mengajar</a>
+                            <a href="cek_jadwal.php"><i class="fas fa-calendar"></i>Jadwal Mengajar</a>
                         </li>
                         <li>
-                            <a href="input_nilai.php"><i class="fas fa-chart-bar"></i>Input Nilai</a>
+                            <a href="input_nilai.php"><i class="fas fa-pencil-square-o"></i>Input Nilai</a>
                         </li>
                     </ul>
                 </nav>
@@ -150,19 +150,19 @@ session_start();
                             <a href="chart.html">
                                 <i class="fas fa-chart-bar"></i>Charts</a>
                         </li><li>
-                            <a href="tambah_murid.php"><i class="fas fa-chart-bar"></i>Tambah Murid</a>
+                            <a href="tambah_murid.php"><i class="fas fa-users"></i>Tambah Murid</a>
                         </li>
                         <li>
-                            <a href="tambah_guru.php"><i class="fas fa-chart-bar"></i>Tamabh Guru</a>
+                            <a href="tambah_guru.php"><i class="fas fa-user"></i>Tamabh Guru</a>
                         </li>
                         <li>
-                            <a href="buat_jadwal.php"><i class="fas fa-chart-bar"></i>Buat Jadwal</a>
+                            <a href="buat_jadwal.php"><i class="fas fa-calendar"></i>Buat Jadwal</a>
                         </li>
                         <li>
-                            <a href="tambah_mapel.php"><i class="fas fa-chart-bar"></i>Buat Mapel</a>
+                            <a href="tambah_mapel.php"><i class="fas fa-book"></i>Buat Mapel</a>
                         </li>
                         <li>
-                            <a href="tambah_kelas.php"><i class="fas fa-chart-bar"></i>Kelas</a>
+                            <a href="tambah_kelas.php"><i class="fas fa-hospital-o"></i>Kelas</a>
                         </li>
                     </ul>
                 </div>
@@ -185,19 +185,19 @@ session_start();
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                         </li>
                         <li>
-                            <a href="tambah_murid.php"><i class="fas fa-chart-bar"></i>Tambah Murid</a>
+                            <a href="tambah_murid.php"><i class="fas fa-users"></i>Tambah Murid</a>
                         </li>
                         <li>
-                            <a href="tambah_guru.php"><i class="fas fa-chart-bar"></i>Tamabh Guru</a>
+                            <a href="tambah_guru.php"><i class="fas fa-user"></i>Tamabh Guru</a>
                         </li>
                         <li>
-                            <a href="buat_jadwal.php"><i class="fas fa-chart-bar"></i>Buat Jadwal</a>
+                            <a href="buat_jadwal.php"><i class="fas fa-calendar"></i>Buat Jadwal</a>
                         </li>
                         <li>
-                            <a href="tambah_mapel.php"><i class="fas fa-chart-bar"></i>Buat Mapel</a>
+                            <a href="tambah_mapel.php"><i class="fas fa-book"></i>Buat Mapel</a>
                         </li>
                         <li>
-                            <a href="tambah_kelas.php"><i class="fas fa-chart-bar"></i>Kelas</a>
+                            <a href="tambah_kelas.php"><i class="fas fa-hospital-o"></i>Kelas</a>
                         </li>
                     </ul>
                 </nav>
