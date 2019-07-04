@@ -15,8 +15,7 @@
                         <th>No</th>
                         <th>Hari</th>
                         <th>Mata Pelajaran</th>
-                        <th>Jam Mulai</th>
-                        <th>Jam Selesai</th>
+                        <th>Jam </th>
                         <th>Pengajar</th>
                     </tr>
                 </thead>
@@ -26,20 +25,17 @@
                 session_start();
                 $kelas = $_SESSION['kelas'];
                 $no=1;
-                $sql="select hari, jam_mulai, jam_selesai, c.nama as nama_guru, b.nama AS nama_mapel from jadwal a inner join mapel b on a.id_mapel=b.id INNER JOIN guru c on b.nip=c.nip where a.kelas='7B' ";
+                $sql="SELECT a.hari as hari, a.jam_mulai as mulai, a.jam_selesai as selesai, c.nama as pengajar, b.nama as mapel from jadwal a inner JOIN mapel b on a.id_mapel=b.id INNER JOIN guru c on b.nip= c.nip inner join kelas d on a.id_kelas=d.id where d.id='$kelas'";
                 $query = mysqli_query($koneksi,$sql);
                 
                 while($hasil = mysqli_fetch_array($query)){ ?>
                    <tr>
                         <td><?= $no; ?> </td>
                         <td><?= $hasil['hari']; ?> </td>
-                        <td><?= $hasil['nama_mapel']; ?> </td>
-                        <td><?= $hasil['jam_mulai']; ?> </td>
-                        <td><?= $hasil['jam_selesai']; ?> </td>
-                        <td><?= $hasil['nama_guru']; ?> </td>
+                        <td><?= $hasil['mapel']; ?> </td>
+                        <td><?= $hasil['mulai']; ?> - <?= $hasil['selesai']; ?></td>
+                        <td><?= $hasil['pengajar']; ?> </td>
                    </tr>
-                
-                
                 <?php $no++; } ?>
                 
                 </tbody>

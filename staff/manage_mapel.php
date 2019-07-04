@@ -4,7 +4,7 @@ include('../koneksi.php');
 if($_POST['manage']=='simpan'){
     $nama = $_POST['nama'];
     $nip = $_POST['nip'];
-    $sql="insert into mapel values('','$nama','$nip');";
+    $sql="insert into mapel values('','$nip','$nama');";
     if(mysqli_query($koneksi,$sql)){
         header("location:tambah_mapel.php?pesan=mapel_added");
     }else{

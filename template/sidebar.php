@@ -86,7 +86,7 @@ session_start();
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                         </li>
                         <li>
-                            <a href=""><i class="fas fa-chart-bar"></i>Jadwal Mengajar</a>
+                            <a href="cek_jadwal.php"><i class="fas fa-chart-bar"></i>Jadwal Mengajar</a>
                         </li>
                         <li>
                             <a href=""><i class="fas fa-chart-bar"></i>Input Nilai</a>
@@ -112,7 +112,7 @@ session_start();
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                         </li>
                         <li>
-                            <a href=""><i class="fas fa-chart-bar"></i>Jadwal Mengajar</a>
+                            <a href="cek_jadwal.php"><i class="fas fa-chart-bar"></i>Jadwal Mengajar</a>
                         </li>
                         <li>
                             <a href=""><i class="fas fa-chart-bar"></i>Input Nilai</a>
@@ -156,7 +156,7 @@ session_start();
                             <a href="tambah_guru.php"><i class="fas fa-chart-bar"></i>Tamabh Guru</a>
                         </li>
                         <li>
-                            <a href=""><i class="fas fa-chart-bar"></i>Buat Jadwal</a>
+                            <a href="buat_jadwal.php"><i class="fas fa-chart-bar"></i>Buat Jadwal</a>
                         </li>
                         <li>
                             <a href="tambah_mapel.php"><i class="fas fa-chart-bar"></i>Buat Mapel</a>
@@ -191,7 +191,7 @@ session_start();
                             <a href="tambah_guru.php"><i class="fas fa-chart-bar"></i>Tamabh Guru</a>
                         </li>
                         <li>
-                            <a href=""><i class="fas fa-chart-bar"></i>Buat Jadwal</a>
+                            <a href="buat_jadwal.php"><i class="fas fa-chart-bar"></i>Buat Jadwal</a>
                         </li>
                         <li>
                             <a href="tambah_mapel.php"><i class="fas fa-chart-bar"></i>Buat Mapel</a>
