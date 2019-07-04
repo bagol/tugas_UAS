@@ -81,6 +81,9 @@ session_start();
                                 </div>
                                 
                                 <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">MASUK</button>
+                                <br>
+                                <a href="dokumentasi.html"> >>Dokumentasi <<</a>
+
                             </form>
                         </div>
                     </div>
