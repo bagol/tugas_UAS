@@ -4,9 +4,10 @@ include('../koneksi.php');
 if($_POST['manage']=='simpan'){
     $nama = $_POST['nama'];
     $nip = $_POST['nip'];
-    $sql="insert into mapel values('','$nip','$nama');";
+    $kelas = $_POST['kelas'];
+    $sql="insert into mapel values('','$nip','$nama','$kelas');";
     if(mysqli_query($koneksi,$sql)){
-        header("location:tambah_mapel.php?pesan=mapel_added");
+        header("location:tambah_mapel.php?pesan=data_added");
     }else{
         header("location:tambah_mapel.php?pesan=field_added");
     }
@@ -14,9 +15,10 @@ if($_POST['manage']=='simpan'){
     $id = $_POST['id'];
     $nama = $_POST['nama'];
     $nip = $_POST['nip'];
-    $sql="update mapel set nama='$nama', nip='$nip' where id='$id'";
+    $kelas = $_POST['kelas'];
+    $sql="update mapel set nama='$nama', nip='$nip', kelas='$kelas' where id='$id'";
     if(mysqli_query($koneksi,$sql)){
-        header("location:tambah_mapel.php?pesan=mapel_updated");
+        header("location:tambah_mapel.php?pesan=data_updated");
     }else{
         header("location:tambah_mapel.php?pesan=field_updated");
     }
@@ -24,7 +26,7 @@ if($_POST['manage']=='simpan'){
     $id = $_POST['id'];
     $sql="delete from mapel where id='$id'";
     if(mysqli_query($koneksi,$sql)){
-        header("location:tambah_mapel.php?pesan=mapel_deleted");
+        header("location:tambah_mapel.php?pesan=data_deleted");
     }else{
         header("location:tambah_mapel.php?pesan=field_deleted");
     }

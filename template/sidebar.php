@@ -89,7 +89,7 @@ session_start();
                             <a href="cek_jadwal.php"><i class="fas fa-chart-bar"></i>Jadwal Mengajar</a>
                         </li>
                         <li>
-                            <a href=""><i class="fas fa-chart-bar"></i>Input Nilai</a>
+                            <a href="input_nilai.php"><i class="fas fa-chart-bar"></i>Input Nilai</a>
                         </li>
                     </ul>
                 </div>
@@ -115,7 +115,7 @@ session_start();
                             <a href="cek_jadwal.php"><i class="fas fa-chart-bar"></i>Jadwal Mengajar</a>
                         </li>
                         <li>
-                            <a href=""><i class="fas fa-chart-bar"></i>Input Nilai</a>
+                            <a href="input_nilai.php"><i class="fas fa-chart-bar"></i>Input Nilai</a>
                         </li>
                     </ul>
                 </nav>

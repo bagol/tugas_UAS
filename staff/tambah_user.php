@@ -13,7 +13,7 @@ if($_POST['user']=='murid'){
     $sql = "INSERT INTO murid values('$nis','$nama','$password','$alamat','$email','$notlpn','$kelas');";
     
     if(mysqli_query($koneksi,$sql)){
-        header("location:tambah_murid.php?pesan=murid_added");
+        header("location:tambah_murid.php?pesan=data_added");
     }else{
         header("location:tambah_murid.php?pesan=faild_added");
     }
@@ -25,7 +25,7 @@ if($_POST['user']=='murid'){
     $alamat = $_POST['alamat'];
     $sql = "INSERT INTO guru values('$nip','$nama','$email','$alamat','$password');";
     if(mysqli_query($koneksi,$sql)){
-        header("location:tambah_guru.php?pesan=murid_added");
+        header("location:tambah_guru.php?pesan=data_added");
     }else{
         header("location:tambah_guru.php?pesan=faild_added");
     }

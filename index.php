@@ -53,6 +53,22 @@ session_start();
                                 <b><h2>Login SIAKAD</h2></b>
                             </a>
                         </div>
+                        <?php if($_GET['pesan']=='salah_pass'){?>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <strong>PASSWORD SALAH !</strong> Periksa Kembali Password anda
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <?php } ?>
+                        <?php if($_GET['pesan']=='invalid_user'){?>
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <strong>AKUN TIDAK DI TEMUKAN !</strong> Silahkan hubungi Staff Untuk mendapatkan Akun
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <?php } ?>
                         <div class="login-form">
                             <form action="login.php" method="post">
                                 <div class="form-group">

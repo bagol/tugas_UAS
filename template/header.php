@@ -99,4 +99,22 @@
             <div class="main-content">
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
+                    <?php if($_GET['pesan']=='data_added'){?>
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong>Berhasil Menambahkan Data</strong> 
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                <?php } ?>
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                    <?php if($_GET['pesan']=='failed_added'){?>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <strong>Gagal Menambahkan Data</strong> 
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                <?php } ?>
                         

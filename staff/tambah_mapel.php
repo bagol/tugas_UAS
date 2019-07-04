@@ -31,6 +31,7 @@
                         <th>Nama Mapel</th>
                         <th>NIP</th>
                         <th>Nama Pengajar</th>
+                        <th>Kelas</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -38,8 +39,16 @@
                     <?php
                     include('../koneksi.php');
 
+                    $kelass = array();
+                    $sql1 = "select * from kelas";
+                    $query1 = mysqli_query($koneksi,$sql1);
+                    $noo = 0 ;
+                    while($kel = mysqli_fetch_array($query1)){
+                        $kelass[$noo++] = array('id' => $kel['id'], 'no' => $kel['no_kelas']);
+                    }
+
                     $no=1;
-                    $sql="select a.id as id, a.nama as nama_mapel, b.nama as nama_guru, b.nip as nip from mapel a inner join guru b on a.nip=b.nip ";
+                    $sql="select a.id as id, a.nama as nama_mapel, b.nama as nama_guru, b.nip as nip,c.no_kelas as kelas from mapel a inner join guru b on a.nip=b.nip join kelas c on a.id_kelas=c.id ";
                     $query = mysqli_query($koneksi,$sql);
                     $sql1="select * from guru";
                     $query1 = mysqli_query($koneksi,$sql1);
@@ -56,6 +65,7 @@
                         <td><?= $hasil['nama_mapel'];?></td>
                         <td><?= $hasil['nip'];?></td>
                         <td ><?= $hasil['nama_guru'];?></td>
+                        <td ><?= $hasil['kelas'];?></td>
                         <td>
                             <div class="table-data-feature">
                                 <button class="item" data-toggle="modal" data-target="#edit<?= $hasil['id'];?>" data-placement="top" title="Ubah">
@@ -105,6 +115,16 @@
                         <?php } ?>
                     </select>
                 </div>
+                <div class="form-group">
+                    <label for="nf-password" class=" form-control-label">Pilih Pengajar</label>
+                    <select name="kelas" id="select" class="form-control">
+                        <?php $sql="select * from kelas";
+                        $query = mysqli_query($koneksi,$sql);
+                        while($kelas = mysqli_fetch_array($query)){ ?>
+                        <option value="<?= $kelas['id'] ?>"><?= $kelas['no_kelas'] ?></option>
+                        <?php } ?>
+                    </select>
+                </div>
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
@@ -118,7 +138,7 @@
 <!-- Modal edit Mapel -->
 <?php
     include 'koneksi.php';
-    $sql="select a.id as id, a.nama as nama_mapel, b.nama as nama_guru, b.nip as nip from mapel a inner join guru b on a.nip=b.nip";
+    $sql="select a.id as id, a.nama as nama_mapel, b.nama as nama_guru, b.nip as nip,c.id as kelas from mapel a inner join guru b on a.nip=b.nip join kelas c on a.id_kelas=c.id ";
     $query = mysqli_query($koneksi,$sql);
     while($edit = mysqli_fetch_array($query)){
 ?>
@@ -150,6 +170,17 @@
                         <?php } ?>
                     </select>
                 </div>
+                <div class="form-group">
+                <label class=" form-control-label">Kelas</label>
+                <select name="kelas" id="select" class="form-control">
+                    <?php 
+                       $length = count($kelass);
+                       for($i=0;$i<$length;$i++){
+                    ?>
+                    <option <?php echo $edit['kelas']==$kelass[$i]['id'] ? 'selected="selected"' : ''; ?> value="<?= $kelass[$i]['id'] ?>"><?= $kelass[$i]['no'] ?></option>
+                    <?php } ?>
+                </select>
+            </div>
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
